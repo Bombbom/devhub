@@ -1,0 +1,802 @@
+site_name: DevHub
+site_description: 'Development & Security Operations Hub - Programming, DevSecOps & System Architecture'
+site_author: 'DevHub Team'
+site_url: 'https://Bombbom.github.io/devhub'
+
+repo_name: Bombbom/devhub
+repo_url: https://github.com/Bombbom/devhub
+# edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  # custom_dir: overrides
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    # Navigation
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    # - navigation.tabs
+    # - navigation.tabs.sticky
+    # - navigation.sections
+    # - navigation.expand
+    # - navigation.path
+    # - navigation.top
+    # - navigation.footer
+    # - navigation.indexes
+    # Search
+    - search.highlight
+    - search.share
+    - search.suggest
+    # Header
+    - header.autohide
+    # Content
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    # - content.action.edit
+    # - content.action.view
+    # ToC
+    - toc.follow
+    - toc.integrate
+    # Instant loading (SPA-like experience)
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+  icon:
+    repo: fontawesome/brands/github
+    # edit: material/pencil
+    # view: material/eye
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+  font:
+    text: Inter
+    code: Fira Code
+
+extra:
+  # version:
+    # provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Bombbom
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/username
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/username
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+  consent:
+    title: Cookie consent
+    description: >
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  instant:
+    # Prefetch external links
+    external: true
+    # Prefetch delay (ms)
+    delay: 100
+    # Progress bar color
+    progress: true
+extra_css:
+  - assets/stylesheets/extra.css
+  - assets/stylesheets/custom.css
+
+extra_javascript:
+  - assets/javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - 🏠 Home: 
+    - index.md
+    - Syntax example: syntax/example.md
+  - 🚀 Getting Started:
+    - getting-started/index.md
+    - Programming Fundamentals:
+      - How the Web Works: getting-started/fundamentals/how-web-works.md
+      - Internet Basics: getting-started/fundamentals/internet-basics.md
+      - HTTP/HTTPS Protocol: getting-started/fundamentals/http-https.md
+      - Client-Server Architecture: getting-started/fundamentals/client-server-architecture.md
+      - DNS and Domains: getting-started/fundamentals/dns-domains.md
+      - Web Standards: getting-started/fundamentals/web-standards.md
+    - Development Environment Setup:
+      - Setting Up Your Workspace: getting-started/setup/workspace-setup.md
+      - Installing .NET SDK: getting-started/setup/dotnet-sdk-installation.md
+      - Choosing an IDE: getting-started/setup/choosing-ide.md
+      - System Requirements: getting-started/setup/system-requirements.md
+      - Environment Variables: getting-started/setup/environment-variables.md
+      - Package Managers: getting-started/setup/package-managers.md
+    - Essential Development Tools:
+      - IDEs and Editors:
+        - Visual Studio 2022: getting-started/tools/ides/visual-studio-2022.md
+        - Visual Studio Code: getting-started/tools/ides/visual-studio-code.md
+        - JetBrains Rider: getting-started/tools/ides/jetbrains-rider.md
+        - IDE Extensions: getting-started/tools/ides/extensions.md
+        - Configuration and Customization: getting-started/tools/ides/configuration.md
+      - Command Line Essentials:
+        - Terminal Basics: getting-started/tools/cli/terminal-basics.md
+        - .NET CLI: getting-started/tools/cli/dotnet-cli.md
+        - PowerShell for Development: getting-started/tools/cli/powershell.md
+        - Package Management CLI: getting-started/tools/cli/package-management.md
+      - Debugging and Testing:
+        - Debugging Fundamentals: getting-started/tools/debugging/debugging-fundamentals.md
+        - Breakpoints and Watch: getting-started/tools/debugging/breakpoints-watch.md
+        - Debug Console: getting-started/tools/debugging/debug-console.md
+        - Testing Tools: getting-started/tools/debugging/testing-tools.md
+        - Performance Profiling: getting-started/tools/debugging/performance-profiling.md
+    - Version Control Mastery:
+      - Git Fundamentals:
+        - Introduction to Git: getting-started/version-control/git/git-introduction.md
+        - Basic Git Commands: getting-started/version-control/git/basic-commands.md
+        - Branching and Merging: getting-started/version-control/git/branching-merging.md
+        - Git Configuration: getting-started/version-control/git/git-configuration.md
+        - .gitignore Best Practices: getting-started/version-control/git/gitignore.md
+      - Remote Repositories:
+        - GitHub Essentials: getting-started/version-control/platforms/github.md
+        - GitLab Basics: getting-started/version-control/platforms/gitlab.md
+        - Azure DevOps: getting-started/version-control/platforms/azure-devops.md
+        - Repository Management: getting-started/version-control/platforms/repository-management.md
+      - Collaboration Workflows:
+        - Git Flow: getting-started/version-control/workflows/git-flow.md
+        - GitHub Flow: getting-started/version-control/workflows/github-flow.md
+        - Feature Branch Workflow: getting-started/version-control/workflows/feature-branch.md
+        - Pull Requests: getting-started/version-control/workflows/pull-requests.md
+        - Code Reviews: getting-started/version-control/workflows/code-reviews.md
+    - Code Quality and Standards:
+      - Coding Standards:
+        - C# Coding Conventions: getting-started/code-quality/standards/csharp-conventions.md
+        - Naming Conventions: getting-started/code-quality/standards/naming-conventions.md
+        - Code Organization: getting-started/code-quality/standards/code-organization.md
+        - Documentation Standards: getting-started/code-quality/standards/documentation.md
+      - Code Analysis Tools:
+        - Static Analysis: getting-started/code-quality/analysis/static-analysis.md
+        - Code Linters: getting-started/code-quality/analysis/linters.md
+        - Code Formatters: getting-started/code-quality/analysis/formatters.md
+        - EditorConfig: getting-started/code-quality/analysis/editorconfig.md
+        - SonarQube: getting-started/code-quality/analysis/sonarqube.md
+      - Testing Fundamentals:
+        - Testing Concepts: getting-started/code-quality/testing/testing-concepts.md
+        - Unit Testing: getting-started/code-quality/testing/unit-testing.md
+        - Test Coverage: getting-started/code-quality/testing/test-coverage.md
+        - Testing Frameworks: getting-started/code-quality/testing/testing-frameworks.md
+    - Project Management:
+      - Project Structure:
+        - Solution Organization: getting-started/project-management/structure/solution-organization.md
+        - Folder Structure: getting-started/project-management/structure/folder-structure.md
+        - Project Templates: getting-started/project-management/structure/project-templates.md
+        - Configuration Files: getting-started/project-management/structure/configuration-files.md
+      - Build and Deployment:
+        - Build Systems: getting-started/project-management/build/build-systems.md
+        - MSBuild Basics: getting-started/project-management/build/msbuild.md
+        - Package Management: getting-started/project-management/build/package-management.md
+        - NuGet Packages: getting-started/project-management/build/nuget-packages.md
+      - Development Lifecycle:
+        - Agile Principles: getting-started/project-management/lifecycle/agile-principles.md
+        - Sprint Planning: getting-started/project-management/lifecycle/sprint-planning.md
+        - Issue Tracking: getting-started/project-management/lifecycle/issue-tracking.md
+        - Documentation: getting-started/project-management/lifecycle/documentation.md
+    - Best Practices and Tips:
+      - Development Best Practices: getting-started/best-practices/development-practices.md
+      - Performance Considerations: getting-started/best-practices/performance-considerations.md
+      - Security Basics: getting-started/best-practices/security-basics.md
+      - Error Handling: getting-started/best-practices/error-handling.md
+      - Logging Best Practices: getting-started/best-practices/logging.md
+      - Code Review Guidelines: getting-started/best-practices/code-review-guidelines.md
+
+  - 💻 Programming Languages:
+    - programming/index.md
+    - Python:
+      - programming/python/index.md
+      - Built-in Data Types: programming/python/built-in-data-types.md
+      - Conditionals and Iteration: programming/python/conditionals-and-iteration.md 
+      - Functions: programming/python/functions.md 
+      - Comprehensions and Generators: programming/python/comprehensions-and-generators.md 
+      - OOP, Decorators, and Iterators: programming/python/oop-decorators-iterators.md
+      - Exceptions and Context Managers: programming/python/exceptions-and-context-managers.md 
+      - Files and Data Persistence: programming/python/files-and-data-persistence.md
+      - Cryptography and Tokens: programming/python/cryptography-and-tokens.md 
+      - Testing: programming/python/testing.md 
+      - Debugging and Profiling: programming/python/debugging-and-profiling.md 
+      - Type Hinting: programming/python/type-hinting.md
+      - Virtual Environments and Packaging: programming/python/virtual-environments-and-packaging.md
+    - C# and .NET:
+      - programming/csharp-net/index.md
+      - C# Basic:
+        - Hello C#: programming/csharp-net/csharp-basic/hello-csharp.md
+        - Introduction C#: programming/csharp-net/csharp-basic/introduction-csharp.md
+        - C# Language Basics: programming/csharp-net/csharp-basic/csharp-language-basics.md
+        - Data Types: programming/csharp-net/csharp-basic/data-types.md
+        - Variables and Operations: programming/csharp-net/csharp-basic/variables-and-operations.md
+        - Control Flow and Exceptions: programming/csharp-net/csharp-basic/control-flow-and-exceptions.md
+        - Methods and Functions: programming/csharp-net/csharp-basic/methods-and-functions.md
+        - Classes and Objects: programming/csharp-net/csharp-basic/classes-and-objects.md
+        - Arrays and Collections: programming/csharp-net/csharp-basic/arrays-and-collections.md
+        - Strings and Text Processing: programming/csharp-net/csharp-basic/strings-and-text-processing.md
+        - File I/O and Basic Streams: programming/csharp-net/csharp-basic/file-io-and-basic-streams.md
+        - Debugging and Testing: programming/csharp-net/csharp-basic/debugging-and-testing.md
+        - .NET Fundamentals: programming/csharp-net/csharp-basic/dotnet-fundamentals.md
+        - Console Applications: programming/csharp-net/csharp-basic/console-applications.md
+      - C# Intermediate:
+        - Object-Oriented Programming: programming/csharp-net/csharp-intermediate/object-oriented-programming.md
+        - Inheritance and Polymorphism: programming/csharp-net/csharp-intermediate/inheritance-and-polymorphism.md
+        - Interfaces and Abstract Classes: programming/csharp-net/csharp-intermediate/interfaces-and-abstract-classes.md
+        - Structs and Records: programming/csharp-net/csharp-intermediate/structs-and-records.md
+        - Exception Handling: programming/csharp-net/csharp-intermediate/exception-handling.md
+        - Generics: programming/csharp-net/csharp-intermediate/generics.md
+        - Delegates and Events: programming/csharp-net/csharp-intermediate/delegates-and-events.md
+        - Lambda Expressions: programming/csharp-net/csharp-intermediate/lambda-expressions.md
+        - LINQ Basics: programming/csharp-net/csharp-intermediate/linq-basics.md
+        - Collections Framework: programming/csharp-net/csharp-intermediate/collections-framework.md
+        - Enums and Constants: programming/csharp-net/csharp-intermediate/enums-and-constants.md
+        - Properties and Indexers: programming/csharp-net/csharp-intermediate/properties-and-indexers.md
+        - Attributes and Annotations: programming/csharp-net/csharp-intermediate/attributes-and-annotations.md
+        - Extension Methods: programming/csharp-net/csharp-intermediate/extension-methods.md
+        - Nullable Types: programming/csharp-net/csharp-intermediate/nullable-types.md
+        - Pattern Matching: programming/csharp-net/csharp-intermediate/pattern-matching.md
+      - C# Advanced:
+        - Advanced Generics: programming/csharp-net/csharp-advanced/advanced-generics.md
+        - Reflection and Metadata: programming/csharp-net/csharp-advanced/reflection-and-metadata.md
+        - Dynamic Programming: programming/csharp-net/csharp-advanced/dynamic-programming.md
+        - Expressions and Expression Trees: programming/csharp-net/csharp-advanced/expressions-and-expression-trees.md
+        - Async and Await: programming/csharp-net/csharp-advanced/async-and-await.md
+        - Task Parallel Library: programming/csharp-net/csharp-advanced/task-parallel-library.md
+        - Concurrency and Threading: programming/csharp-net/csharp-advanced/concurrency-and-threading.md
+        - Parallel Programming: programming/csharp-net/csharp-advanced/parallel-programming.md
+        - Memory Management: programming/csharp-net/csharp-advanced/memory-management.md
+        - Garbage Collection: programming/csharp-net/csharp-advanced/garbage-collection.md
+        - Unsafe Code and Pointers: programming/csharp-net/csharp-advanced/unsafe-code-and-pointers.md
+        - Span and Memory: programming/csharp-net/csharp-advanced/span-and-memory.md
+        - Source Generators: programming/csharp-net/csharp-advanced/source-generators.md
+        - Caller Info Attributes: programming/csharp-net/csharp-advanced/caller-info-attributes.md
+        - Advanced Threading: programming/csharp-net/csharp-advanced/advanced-threading.md
+        - Thread Synchronization: programming/csharp-net/csharp-advanced/thread-synchronization.md
+      - .NET Framework and Libraries:
+        - .NET Overview: programming/csharp-net/dotnet-framework/dotnet-overview.md
+        - .NET Standard and Runtime: programming/csharp-net/dotnet-framework/dotnet-standard-and-runtime.md
+        - Base Class Library: programming/csharp-net/dotnet-framework/base-class-library.md
+        - Assemblies and Loading: programming/csharp-net/dotnet-framework/assemblies-and-loading.md
+        - Application Domains: programming/csharp-net/dotnet-framework/application-domains.md
+        - Packaging and Distribution: programming/csharp-net/dotnet-framework/packaging-and-distribution.md
+        - NuGet and Package Management: programming/csharp-net/dotnet-framework/nuget-and-package-management.md
+        - Dependency Injection: programming/csharp-net/dotnet-framework/dependency-injection.md
+        - Configuration Management: programming/csharp-net/dotnet-framework/configuration-management.md
+        - Logging and Diagnostics: programming/csharp-net/dotnet-framework/logging-and-diagnostics.md
+        - Globalization and Localization: programming/csharp-net/dotnet-framework/globalization-and-localization.md
+        - Security: programming/csharp-net/dotnet-framework/security.md
+        - Cryptography: programming/csharp-net/dotnet-framework/cryptography.md
+      - Data and LINQ:
+        - LINQ Fundamentals: programming/csharp-net/data-and-linq/linq-fundamentals.md
+        - LINQ Query Expressions: programming/csharp-net/data-and-linq/linq-query-expressions.md
+        - LINQ Operators: programming/csharp-net/data-and-linq/linq-operators.md
+        - LINQ to Objects: programming/csharp-net/data-and-linq/linq-to-objects.md
+        - Entity Framework Core: programming/csharp-net/data-and-linq/entity-framework-core.md
+        - Database Models and Relationships: programming/csharp-net/data-and-linq/database-models-and-relationships.md
+        - Querying and Updating Data: programming/csharp-net/data-and-linq/querying-and-updating-data.md
+        - Data Migrations: programming/csharp-net/data-and-linq/data-migrations.md
+        - LINQ to XML: programming/csharp-net/data-and-linq/linq-to-xml.md
+        - JSON Processing: programming/csharp-net/data-and-linq/json-processing.md
+        - XML Processing: programming/csharp-net/data-and-linq/xml-processing.md
+        - Serialization and Deserialization: programming/csharp-net/data-and-linq/serialization-and-deserialization.md
+      - I/O and Networking:
+        - File System Operations: programming/csharp-net/io-and-networking/file-system-operations.md
+        - Streams and I/O: programming/csharp-net/io-and-networking/streams-and-io.md
+        - Stream Adapters and Compression: programming/csharp-net/io-and-networking/stream-adapters-and-compression.md
+        - Memory-Mapped Files: programming/csharp-net/io-and-networking/memory-mapped-files.md
+        - Network Programming: programming/csharp-net/io-and-networking/network-programming.md
+        - HTTP Client and Server: programming/csharp-net/io-and-networking/http-client-and-server.md
+        - TCP and UDP Networking: programming/csharp-net/io-and-networking/tcp-and-udp-networking.md
+        - Email and SMTP: programming/csharp-net/io-and-networking/email-and-smtp.md
+        - DNS and Network Utilities: programming/csharp-net/io-and-networking/dns-and-network-utilities.md
+      - Advanced Topics:
+        - Regular Expressions: programming/csharp-net/advanced-topics/regular-expressions.md
+        - Interoperability: programming/csharp-net/advanced-topics/interoperability.md
+        - Native COM Interop: programming/csharp-net/advanced-topics/native-com-interop.md
+        - Platform Invoke (P/Invoke): programming/csharp-net/advanced-topics/platform-invoke.md
+        - Performance and Optimization: programming/csharp-net/advanced-topics/performance-and-optimization.md
+        - Diagnostics and Profiling: programming/csharp-net/advanced-topics/diagnostics-and-profiling.md
+        - Cross-Platform Development: programming/csharp-net/advanced-topics/cross-platform-development.md
+        - Code Analysis and Metrics: programming/csharp-net/advanced-topics/code-analysis-and-metrics.md
+
+    # - JavaScript/TypeScript:
+    #   - programming/javascript/index.md
+    #   - Modern JavaScript: programming/javascript/modern-js.md
+    #   - TypeScript: programming/javascript/typescript.md
+    #   - Node.js: programming/javascript/nodejs.md
+    #   - Frontend Frameworks: programming/javascript/frameworks.md
+    #   - Testing: programming/javascript/testing.md
+    #   - Build Tools: programming/javascript/build-tools.md
+    # - Go:
+    #   - programming/go/index.md
+    #   - Getting Started: programming/go/getting-started.md
+    #   - Web Services: programming/go/web-services.md
+    #   - Microservices: programming/go/microservices.md
+    #   - Performance: programming/go/performance.md
+    #   - Testing: programming/go/testing.md
+    - SQL:
+      - programming/sql/index.md
+      - Basis SQL:
+        - Filtering Data: programming/sql/basic-sql/filtering-data.md
+        - Ordering Result: programming/sql/basic-sql/ordering-result.md
+        - Calculating Column Value: programming/sql/basic-sql/calculating-column-value.md
+        - Joining Tables: programming/sql/basic-sql/joining-tables.md
+        - Aggregating Data: programming/sql/basic-sql/aggregating-data.md
+        - Working with Tables: programming/sql/basic-sql/working-with-tables.md
+        - Set Operations: programming/sql/basic-sql/set-operations.md
+        - Example databases: programming/sql/basic-sql/example-database.md
+      - Leveling up SQL:
+        - Working with Table Design: programming/sql/leveling-up-sql/working-with-table-design.md
+        - Table Relationships and Joins: programming/sql/leveling-up-sql/table-relationships-and-joins.md
+        - Working with Calculated Data: programming/sql/leveling-up-sql/working-with-calculated-data.md
+        - Aggregating Data: programming/sql/leveling-up-sql/aggregating-data.md
+        - Using Views and Friends: programming/sql/leveling-up-sql/using-views-and-friends.md
+        - Working with Subqueries and Common Table Expressions: programming/sql/leveling-up-sql/working-with-subqueries-and-ctes.md
+        - Window Functions: programming/sql/leveling-up-sql/window-functions.md
+        - More on Common Table Expressions: programming/sql/leveling-up-sql/more-on-ctes.md
+        - More Techniques Triggers, Pivot Tables and Variables: programming/sql/leveling-up-sql/more-techniques-triggers-pivot-tables-and-variables.md
+    # - T-SQL:
+    #   - programming/t-sql/index.md 
+
+    - DSA:
+      - Introduction to DSA: programming/dsa/introduction.md
+      - Arrays: programming/dsa/arrays.md
+      - Linked Lists: programming/dsa/linked-lists.md
+      - Stacks: programming/dsa/stacks.md
+      - Queues: programming/dsa/queues.md
+      - Trees: programming/dsa/trees.md
+      - Graphs: programming/dsa/graphs.md
+      - Searching Algorithms: programming/dsa/searching.md
+      - Sorting Algorithms: programming/dsa/sorting.md
+    - OOP:
+      - Introduction to OOP: programming/oop/introduction.md
+    - Functional Programming:
+      - Introduction to Functional Programming: programming/functional/introduction.md
+    - Leetcode:
+      - Introduction to Leetcode: programming/leetcode/introduction.md
+      - Leetcode Patterns: programming/leetcode/patterns.md
+      - Leetcode Solutions: programming/leetcode/solutions.md
+    - Codeforces:
+      - Introduction to Codeforces: programming/codeforces/introduction.md
+      - Codeforces Problems: programming/codeforces/problems.md
+      - Codeforces Solutions: programming/codeforces/solutions.md
+    - Interview:
+      - Common Interview Questions: programming/interview/common-questions.md
+      - System Design: programming/interview/system-design.md
+      - Behavioral Questions: programming/interview/behavioral-questions.md
+  
+  - 🔧 Backend Development:
+    - backend/index.md
+    - Web Frameworks:
+      - backend/frameworks/index.md
+      - FastAPI: backend/frameworks/fastapi.md
+      - ASP.NET Core: backend/frameworks/aspnet-core.md
+      - Gin: backend/frameworks/gin.md
+    - API Design:
+      - backend/api/index.md
+      - RESTful APIs: backend/api/rest.md
+      - GraphQL: backend/api/graphql.md
+      - gRPC: backend/api/grpc.md
+      - WebSockets: backend/api/websockets.md
+      - API Security: backend/api/security.md
+      - API Documentation: backend/api/documentation.md
+    - Databases:
+      - backend/databases/index.md
+      - Relational Databases:
+        - PostgreSQL: backend/databases/postgresql.md
+        - MySQL: backend/databases/mysql.md
+        - SQLite: backend/databases/sqlite.md
+      - NoSQL Databases:
+        - MongoDB: backend/databases/mongodb.md
+        - Redis: backend/databases/redis.md
+        - Elasticsearch: backend/databases/elasticsearch.md
+      - Database Operations:
+        - Migrations: backend/databases/migrations.md
+        - Backup & Recovery: backend/databases/backup.md
+        - Performance Tuning: backend/databases/performance.md
+    - Authentication & Authorization:
+      - backend/auth/index.md
+      - JWT: backend/auth/jwt.md
+      - OAuth 2.0: backend/auth/oauth2.md
+      - RBAC: backend/auth/rbac.md
+      - Multi-factor Auth: backend/auth/mfa.md
+    - Caching:
+      - backend/caching/index.md
+      - Redis: backend/caching/redis.md
+      - Memcached: backend/caching/memcached.md
+      - CDN: backend/caching/cdn.md
+      - Application Caching: backend/caching/application.md
+    - Message Queues:
+      - backend/messaging/index.md
+      - RabbitMQ: backend/messaging/rabbitmq.md
+      - Apache Kafka: backend/messaging/kafka.md
+      - Redis Pub/Sub: backend/messaging/redis-pubsub.md
+      - AWS SQS: backend/messaging/aws-sqs.md
+    - ASP.NET Core: 
+      - backend/aspnet-core/index.md
+      - Getting Started: backend/aspnet-core/getting-started.md 
+      - ASP.NET Core Fundamentals:
+        - Routing: backend/aspnet-core/routing.md
+        - Configuration: backend/aspnet-core/configuration.md 
+        - Environments: backend/aspnet-core/environments.md 
+        - Logging: backend/aspnet-core/logging.md 
+        - Middleware: backend/aspnet-core/middleware.md 
+        - Dependency Injection: backend/aspnet-core/dependency-injection.md
+      - Data Access in ASP.NET Core:
+        - Entity Framework Core: backend/aspnet-core/ef-core.md
+        - Dapper: backend/aspnet-core/dapper.md
+        - ADO.NET: backend/aspnet-core/ado-net.md
+        - Entity Relationships: backend/aspnet-core/entity-relationships.md
+        - Tips: backend/aspnet-core/data-access-tips.md
+      - Security and Identity in ASP.NET Core:
+        - Authentication: backend/aspnet-core/authentication.md
+        - Authorization: backend/aspnet-core/authorization.md
+        - Identity Framework: backend/aspnet-core/identity-framework.md
+        - Data Protection: backend/aspnet-core/data-protection.md
+        - Security Best Practices: backend/aspnet-core/security-best-practices.md
+      - Testing in ASP.NET Core:
+        - Unit Testing: backend/aspnet-core/unit-testing.md
+        - Integration Testing: backend/aspnet-core/integration-testing.md
+      - Getting Started with gRPC:
+        - Introduction to gRPC: backend/aspnet-core/grpc-intro.md
+        - gRPC Basics: backend/aspnet-core/grpc-basics.md
+        - gRPC in ASP.NET Core: backend/aspnet-core/grpc-aspnetcore.md
+      - Getting Started with GraphQL:
+        - Introduction to GraphQL: backend/aspnet-core/graphql-intro.md
+        - GraphQL Basics: backend/aspnet-core/graphql-basics.md
+        - GraphQL in ASP.NET Core: backend/aspnet-core/graphql-aspnetcore.md
+      - Getting Started with SignalR:
+        - Introduction to SignalR: backend/aspnet-core/signalr-intro.md
+        - SignalR Basics: backend/aspnet-core/signalr-basics.md
+        - SignalR in ASP.NET Core: backend/aspnet-core/signalr-aspnetcore.md
+  # - 🚀 System Architecture:
+  #   - architecture/index.md
+  #   - Design Patterns:
+  #     - architecture/patterns/index.md
+  #     - Microservices: architecture/patterns/microservices.md
+  #     - Event-Driven: architecture/patterns/event-driven.md
+  #     - CQRS: architecture/patterns/cqrs.md
+  #     - Saga Pattern: architecture/patterns/saga.md
+  #     - Circuit Breaker: architecture/patterns/circuit-breaker.md
+    # - Clean Architecture with Python:
+    #   - Foundations of Clean Architecture in Python:
+    #     - Clean Architecture Essentials:
+    #     - SOLID Foundations:
+    #     - Type-Enhanced Python:
+    #   - Implementing Clean Architecture in Python:
+    #     - Domain-Driven Design:
+    #     - The Application Layer:
+    #     - The Interface Adapters Layer:
+    #     - The Frameworks and Drivers Layers:
+    #     - Implementing Test Patterns with Clean Architecture:
+    #   - Applying Clean Architecture in Python:
+    #     - Adding Web UI:
+    #     - Implementing Observability:
+    #     - Refactoring Python for Maintainability:
+
+    # - System Design:
+    #   - architecture/system-design/index.md
+    #   - Scalability: architecture/system-design/scalability.md
+    #   - Load Balancing: architecture/system-design/load-balancing.md
+    #   - Database Sharding: architecture/system-design/sharding.md
+    #   - Distributed Systems: architecture/system-design/distributed.md
+    #   - CAP Theorem: architecture/system-design/cap-theorem.md
+    # - Performance:
+    #   - architecture/performance/index.md
+    #   - Profiling: architecture/performance/profiling.md
+    #   - Monitoring: architecture/performance/monitoring.md
+    #   - Optimization: architecture/performance/optimization.md
+    #   - Benchmarking: architecture/performance/benchmarking.md
+
+  - 🚀 DevOps & Infrastructure:
+    - devops/index.md
+    - Containerization:
+      - devops/containers/index.md
+      - Docker:
+        - Docker Basics: devops/containers/docker/basics.md
+        - Dockerfile Best Practices: devops/containers/docker/dockerfile.md
+        - Docker Compose: devops/containers/docker/compose.md
+        - Multi-stage Builds: devops/containers/docker/multistage.md
+        - Security: devops/containers/docker/security.md
+  #     - Kubernetes:
+  #       - K8s Fundamentals: devops/containers/kubernetes/fundamentals.md
+  #       - Deployments: devops/containers/kubernetes/deployments.md
+  #       - Services & Networking: devops/containers/kubernetes/networking.md
+  #       - ConfigMaps & Secrets: devops/containers/kubernetes/configs.md
+  #       - Helm Charts: devops/containers/kubernetes/helm.md
+  #       - Security: devops/containers/kubernetes/security.md
+  #   - CI/CD:
+  #     - devops/cicd/index.md
+  #     - Pipeline Design: devops/cicd/pipeline-design.md
+  #     - GitHub Actions: devops/cicd/github-actions.md
+  #     - GitLab CI: devops/cicd/gitlab-ci.md
+  #     - Jenkins: devops/cicd/jenkins.md
+  #     - Testing in CI/CD: devops/cicd/testing.md
+  #     - Deployment Strategies: devops/cicd/deployment-strategies.md
+  #   - Infrastructure as Code:
+  #     - devops/iac/index.md
+  #     - Terraform: devops/iac/terraform.md
+  #     - Ansible: devops/iac/ansible.md
+  #     - CloudFormation: devops/iac/cloudformation.md
+  #     - Pulumi: devops/iac/pulumi.md
+  #   - Cloud Platforms:
+  #     - devops/cloud/index.md
+  #     - AWS:
+  #       - EC2 & VPC: devops/cloud/aws/compute.md
+  #       - S3 & Storage: devops/cloud/aws/storage.md
+  #       - RDS & Databases: devops/cloud/aws/databases.md
+  #       - Lambda & Serverless: devops/cloud/aws/serverless.md
+  #       - EKS: devops/cloud/aws/eks.md
+  #     - Azure:
+  #       - Virtual Machines: devops/cloud/azure/compute.md
+  #       - Storage: devops/cloud/azure/storage.md
+  #       - AKS: devops/cloud/azure/aks.md
+  #     - Google Cloud:
+  #       - Compute Engine: devops/cloud/gcp/compute.md
+  #       - Cloud Storage: devops/cloud/gcp/storage.md
+  #       - GKE: devops/cloud/gcp/gke.md
+  #   - Monitoring & Observability:
+  #     - devops/monitoring/index.md
+  #     - Prometheus & Grafana: devops/monitoring/prometheus-grafana.md
+  #     - ELK Stack: devops/monitoring/elk-stack.md
+  #     - Jaeger Tracing: devops/monitoring/jaeger.md
+  #     - Application Metrics: devops/monitoring/app-metrics.md
+  #     - Alerting: devops/monitoring/alerting.md
+
+  # - 🚀 DevSecOps:
+  #   - devsecops/index.md
+  #   - Security in SDLC:
+  #     - devsecops/sdlc/index.md
+  #     - Threat Modeling: devsecops/sdlc/threat-modeling.md
+  #     - Security Requirements: devsecops/sdlc/requirements.md
+  #     - Security Testing: devsecops/sdlc/testing.md
+  #     - Code Review: devsecops/sdlc/code-review.md
+  #   - Secure Coding:
+  #     - devsecops/secure-coding/index.md
+  #     - OWASP Top 10: devsecops/secure-coding/owasp-top10.md
+  #     - Input Validation: devsecops/secure-coding/input-validation.md
+  #     - Authentication: devsecops/secure-coding/authentication.md
+  #     - Authorization: devsecops/secure-coding/authorization.md
+  #     - Cryptography: devsecops/secure-coding/cryptography.md
+  #     - Error Handling: devsecops/secure-coding/error-handling.md
+  #   - Security Testing:
+  #     - devsecops/security-testing/index.md
+  #     - SAST:
+  #       - SonarQube: devsecops/security-testing/sast/sonarqube.md
+  #       - CodeQL: devsecops/security-testing/sast/codeql.md
+  #       - Semgrep: devsecops/security-testing/sast/semgrep.md
+  #     - DAST:
+  #       - OWASP ZAP: devsecops/security-testing/dast/zap.md
+  #       - Burp Suite: devsecops/security-testing/dast/burp.md
+  #       - Nuclei: devsecops/security-testing/dast/nuclei.md
+  #     - SCA:
+  #       - Dependency Check: devsecops/security-testing/sca/dependency-check.md
+  #       - Snyk: devsecops/security-testing/sca/snyk.md
+  #       - Trivy: devsecops/security-testing/sca/trivy.md
+  #     - IAST: devsecops/security-testing/iast/index.md
+  #   - Container Security:
+  #     - devsecops/container-security/index.md
+  #     - Image Scanning: devsecops/container-security/image-scanning.md
+  #     - Runtime Security: devsecops/container-security/runtime-security.md
+  #     - Network Policies: devsecops/container-security/network-policies.md
+  #     - Pod Security Standards: devsecops/container-security/pod-security.md
+  #   - Infrastructure Security:
+  #     - devsecops/infrastructure-security/index.md
+  #     - Network Security: devsecops/infrastructure-security/network.md
+  #     - Identity & Access Management: devsecops/infrastructure-security/iam.md
+  #     - Secrets Management: devsecops/infrastructure-security/secrets.md
+  #     - Compliance: devsecops/infrastructure-security/compliance.md
+  #   - Security Automation:
+  #     - devsecops/automation/index.md
+  #     - Security in CI/CD: devsecops/automation/cicd-security.md
+  #     - Automated Testing: devsecops/automation/automated-testing.md
+  #     - Policy as Code: devsecops/automation/policy-as-code.md
+  #     - Security Dashboards: devsecops/automation/dashboards.md
+  #   - Testing:
+  #     - testing/index.md
+  #     - Testing Strategies:
+  #       - testing/strategies/index.md
+  #       - Unit Testing: testing/strategies/unit-testing.md
+  #       - Integration Testing: testing/strategies/integration-testing.md
+  #       - E2E Testing: testing/strategies/e2e-testing.md
+  #       - Performance Testing: testing/strategies/performance-testing.md
+  #       - Security Testing: testing/strategies/security-testing.md
+  #     - Testing Frameworks:
+  #       - testing/frameworks/index.md
+  #       - Python: testing/frameworks/python.md
+  #       - JavaScript: testing/frameworks/javascript.md
+  #       - Go: testing/frameworks/go.md
+  #       - API Testing: testing/frameworks/api-testing.md
+  #     - Test Automation:
+  #       - testing/automation/index.md
+  #       - CI/CD Integration: testing/automation/cicd.md
+  #       - Test Data Management: testing/automation/test-data.md
+  #       - Reporting: testing/automation/reporting.md
+
+  # - 🚀 Best Practices:
+  #   - best-practices/index.md
+  #   - Code Quality:
+  #     - best-practices/code-quality/index.md
+  #     - Clean Code: best-practices/code-quality/clean-code.md
+  #     - Code Review: best-practices/code-quality/code-review.md
+  #     - Documentation: best-practices/code-quality/documentation.md
+  #     - Refactoring: best-practices/code-quality/refactoring.md
+  #   - Performance:
+  #     - best-practices/performance/index.md
+  #     - Application Performance: best-practices/performance/application.md
+  #     - Database Performance: best-practices/performance/database.md
+  #     - Caching Strategies: best-practices/performance/caching.md
+  #   - Security:
+  #     - best-practices/security/index.md
+  #     - Secure Development: best-practices/security/development.md
+  #     - Data Protection: best-practices/security/data-protection.md
+  #     - Access Control: best-practices/security/access-control.md
+  #   - Team Collaboration:
+  #     - best-practices/collaboration/index.md
+  #     - Git Workflow: best-practices/collaboration/git-workflow.md
+  #     - Code Standards: best-practices/collaboration/code-standards.md
+  #     - Documentation: best-practices/collaboration/documentation.md
+  #     - Knowledge Sharing: best-practices/collaboration/knowledge-sharing.md
+  #   - AspNet Core API Best Practices:
+  #     - best-practices/aspnet-core/index.md
+  #     - Project Structure: best-practices/aspnet-core/project-structure.md
+  #     - Dependency Injection: best-practices/aspnet-core/dependency-injection.md
+  #     - Middleware: best-practices/aspnet-core/middleware.md
+  #     - Error Handling: best-practices/aspnet-core/error-handling.md
+  #     - Logging: best-practices/aspnet-core/logging.md
+
+  # - 🚀 Resources:
+  #   - resources/index.md
+  #   - Cheatsheets:
+  #     - resources/cheatsheets/index.md
+  #     - Git: resources/cheatsheets/git.md
+  #     - Docker: resources/cheatsheets/docker.md
+  #     - Kubernetes: resources/cheatsheets/kubernetes.md
+  #     - SQL: resources/cheatsheets/sql.md
+  #     - Bash: resources/cheatsheets/bash.md
+  #     - Vim: resources/cheatsheets/vim.md
+  #   - Templates:
+  #     - resources/templates/index.md
+  #     - Project Structure: resources/templates/project-structure.md
+  #     - CI/CD Pipelines: resources/templates/cicd-pipelines.md
+  #     - Docker Files: resources/templates/dockerfiles.md
+  #     - Kubernetes Manifests: resources/templates/k8s-manifests.md
+  #   - Learning Paths:
+  #     - resources/learning/index.md
+  #     - Backend Developer: resources/learning/backend-developer.md
+  #     - DevOps Engineer: resources/learning/devops-engineer.md
+  #     - Security Engineer: resources/learning/security-engineer.md
+  #     - Full Stack Developer: resources/learning/fullstack-developer.md
+  #   - Books & Courses:
+  #     - resources/books/index.md
+  #     - Programming: resources/books/programming.md
+  #     - System Design: resources/books/system-design.md
+  #     - DevOps: resources/books/devops.md
+  #     - Security: resources/books/security.md
+  #   - Communities:
+  #     - resources/communities/index.md
+  #     - Open Source: resources/communities/open-source.md
+  #     - Conferences: resources/communities/conferences.md
+  #     - Online Communities: resources/communities/online.md
+
+  # - 🚀 Glossary: glossary.md
+  # - Blog: 
+  #   - blog/index.md
+
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+  # - git-revision-date-localized:
+  #     type: datetime
+  #     fallback_to_build_date: true
+  #     locale: en
+  # - git-committers:
+  #     repository: username/devhub
+  #     branch: main
+  - tags:
+      tags_file: tags.md
+  # - social:
+  #     enabled: !ENV CI
+  #     cache_dir: .cache
+  #     cards_layout_options:
+  #       color: "#2094f3"
+
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - pymdownx.blocks.admonition
+  - pymdownx.blocks.caption
+  - pymdownx.blocks.definition
+  - pymdownx.blocks.details
+  - pymdownx.blocks.html
+  - pymdownx.blocks.tab
+  - pymdownx.tabbed
+  - pymdownx.details
+  # - pymdownx.fancylist
+  # - pymdownx.saneheaders
+  - pymdownx.progressbar
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.betterem
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - toc:
+      permalink: true
+  # - tables
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: username
+      repo: devhub
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      base_path: 
+        - docs/snippets
+        - docs/examples
+      check_paths: true
+      dedent_subsections: true
+      url_download: true
+  
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+validation:
+  absolute_links: warn
+  unrecognized_links: warn

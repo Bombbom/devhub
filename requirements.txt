@@ -1,0 +1,17 @@
+# Core MkDocs
+mkdocs
+mkdocs-material
+
+# Extensions
+pymdown-extensions
+markdown
+
+# Plugins
+mkdocs-git-revision-date-localized-plugin
+mkdocs-git-committers-plugin-2
+mkdocs-minify-plugin
+
+
+# Optional enhancements
+pillow
+cairosvg
